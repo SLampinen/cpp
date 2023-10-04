@@ -6,7 +6,7 @@
 /*   By: slampine <slampine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:52:01 by slampine          #+#    #+#             */
-/*   Updated: 2023/09/29 09:12:47 by slampine         ###   ########.fr       */
+/*   Updated: 2023/10/03 10:09:11 by slampine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int main(void)
 		}
 		if (input.compare("SEARCH") == 0)
 		{
-			book.search();
+			book.display();
 		}
 	std::cout << "\n";
-	book.init();
+	book.menu();
 	std::cin >> input;
 	}
 }
