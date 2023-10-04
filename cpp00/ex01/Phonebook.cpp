@@ -6,7 +6,7 @@
 /*   By: slampine <slampine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:43:25 by slampine          #+#    #+#             */
-/*   Updated: 2023/10/04 13:58:33 by slampine         ###   ########.fr       */
+/*   Updated: 2023/10/04 14:10:44 by slampine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,11 @@ void Phonebook::add(void)
 }
 void Phonebook::search(int num)
 {
-num++;
+	std::cout << "First name:" << this->contacts[num].getName() << "\n";
+	std::cout << "Last name:" << this->contacts[num].getLastName() << "\n";
+	std::cout << "Nickname:" << this->contacts[num].getNickname() << "\n";
+	std::cout << "Secret:" << this->contacts[num].getSecret() << "\n";
+	std::cout << "Phone number:" << this->contacts[num].getNumber() << "\n";
 }
 
 void Phonebook::display(void)
@@ -55,7 +59,6 @@ void Phonebook::display(void)
 	}
 	if (this->contacts[0].getName() == "")
 		return ;
-	std::cout << "Enter index\n";
 	while (contacts[maxindex].getName() != "")
 	{
 		maxindex++;
@@ -69,10 +72,8 @@ void Phonebook::display(void)
 			if (num >= 0 && num < maxindex)
 				valid = 1;
 		}
+		if (!valid)
+			std::cout << "Give index between " << 0 << " and " << maxindex - 1<< "\n"; 
 	} while (!valid);
 	this->search(num);
-}
-void Phonebook::print(std::string text)
-{
-	std::cout << text;
 }

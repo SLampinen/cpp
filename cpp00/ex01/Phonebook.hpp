@@ -6,7 +6,7 @@
 /*   By: slampine <slampine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:45:56 by slampine          #+#    #+#             */
-/*   Updated: 2023/10/04 13:51:50 by slampine         ###   ########.fr       */
+/*   Updated: 2023/10/04 14:04:56 by slampine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include "Contact.hpp"
 
 class Phonebook{
-	void print(std::string text);
 	public:
     Phonebook();
     ~Phonebook();
