@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slampine <slampine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 14:16:02 by slampine          #+#    #+#             */
-/*   Updated: 2023/10/09 13:05:49 by slampine         ###   ########.fr       */
+/*   Created: 2023/10/13 09:16:42 by slampine          #+#    #+#             */
+/*   Updated: 2023/10/13 10:19:57 by slampine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include <iostream>
 
-int main(void)
-{
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-}
+class Harl{
+	private:
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
+
+	public:
+	Harl();
+	~Harl();
+	void complain(std::string level);
+};
+typedef void (Harl::*funct) (void);
